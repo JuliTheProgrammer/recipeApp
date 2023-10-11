@@ -23,6 +23,7 @@ struct MainTabView: View {
                     Image(systemName: "list.bullet")
                 }
         }
+        .environmentObject(RecipeModel())
     }
 }
 

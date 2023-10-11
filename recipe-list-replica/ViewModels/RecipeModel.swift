@@ -7,12 +7,9 @@
 
 import Foundation
 
-class RecipeModel {
-    
-    
+class RecipeModel:ObservableObject {
     //Data
-    
-    var recipes = [Recipe]()
+    @Published var recipes = [Recipe]()
     
     init() {
         self.recipes = DataService.getLocalData()

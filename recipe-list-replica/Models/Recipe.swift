@@ -13,6 +13,8 @@ class Recipe: Decodable, Identifiable {
     var featured: Bool
     var image: String
     var description: String
+    var prepTime: String
+    var cookTime: String
     var totalTime: String
     var servings: Int
     var highlights: [String]
@@ -20,7 +22,10 @@ class Recipe: Decodable, Identifiable {
     var directions: [String]
 }
 
-struct Ingredient: Decodable {
+class Ingredient: Decodable, Identifiable {
+    var id: UUID?
     var name: String
-    var num: Int
+    var num: Int?
+    var denom: Int?
+    var unit: String?
 }

@@ -15,9 +15,9 @@ struct DataService {
         let path = Bundle.main.path(forResource: "recipes", ofType: "json")
         
         //Check if path is not nil
-        guard path != nil else {
-            return [Recipe]()
-        }
+        //guard path != nil else {
+        //    return [Recipe]()
+        //}
         
         //Convert to URL Object
         let url = URL(filePath: path!)
@@ -36,6 +36,11 @@ struct DataService {
                 //Assign every Recipe an ID
                 for r in finalData {
                     r.id = UUID()
+                    
+                    //Asign every ingredient an ID
+                    for i in r.ingredients {
+                        i.id = UUID()
+                    }
                 }
                 
                 //Return the finalData
