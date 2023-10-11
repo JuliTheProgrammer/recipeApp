@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct recipe_list_replicaApp: App {
+struct Recipe-List: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
